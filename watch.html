@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 2em;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1em;
+      margin-bottom: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #333;
+      color: white;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Watch Market</h1>
+    <nav>
+      <a href="#buy">Buy</a>
+      <a href="#sell">Sell</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <section id="buy">
+      <h2>Buy a Watch</h2>
+      <div class="card">
+        <img src="./c8bd46ce-71fc-473b-9128-4e1c42f9590f.jpg" alt="Watch">
+        <h3>Omega Speedmaster</h3>
+        <p>$3,000</p>
+        <button onclick="alert('Added to cart')">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="./f845dd01-81f0-4408-afb1-ae986f3a2dd5.jpg" alt="Watch">
+        <h3>Rolex Submariner</h3>
+        <p>$7,500</p>
+        <button onclick="alert('Added to cart')">Buy Now</button>
+      </div>
+    </section>
+
+    <section id="sell">
+      <h2>Sell a Watch</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Watch Name" required>
+        <input type="text" placeholder="Price ($)" required>
+        <textarea placeholder="Description" required></textarea>
+        <button type="submit">Submit Watch</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Watch Market. All rights reserved.
+  </footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Thank you! Your watch has been submitted for review.');
+    }
+  </script>
+
+</body>
+</html>
